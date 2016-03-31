@@ -1,0 +1,33 @@
+<ion-view view-title="{{ 'other' | translate }}">
+  <ion-content>
+  <ion-list>
+    <label class="item item-input item-select">
+      <div class="input-label">
+        {{ 'language' | translate }}
+      </div>
+
+      <select 
+        ng-options="lang.code as lang.name for lang in languages" 
+        ng-model="selectedLang" 
+        ng-change="updateLanguage(selectedLang)">
+      </select>
+    </label>
+
+      <ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/other-ref">
+        {{ 'reference' | translate }}
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+<!--
+    <ion-list>
+    	<ion-item class="item-icon-right" type="item-text-wrap" href="#/tab/setting-language">
+        {{ 'language' | translate }}
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  -->
+
+  </ion-content>
+
+</ion-view>

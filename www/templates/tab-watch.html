@@ -1,0 +1,27 @@
+<ion-view view-title="{{ 'watch' | translate }}">
+  <ion-content class="padding" overflow-scroll="true">
+    <ion-list>
+        <div class="list card">
+          <p class="item item-icon-left assertive" >
+            <i class="icon ion-music-note"></i>
+            {{ 'zhf_0' | translate }} ({{ 'chinese' | translate }})
+          </p>
+          <div class="item item-image">
+            <video controls='controls'>
+                <source src='img/zhenFoJing.mp4' type='video/mp4'>
+            </video>
+          </div>
+        </div>
+
+        <div class="list card">
+          <p class="item item-icon-left assertive" >
+            <i class="icon ion-music-note"></i>
+            {{ 'video_title_10' | translate }} ({{ 'chinese' | translate }})
+          </p>
+          <div class="item item-image">
+            <iframe src="https://player.vimeo.com/video/111649249?loop=1&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

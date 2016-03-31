@@ -1,0 +1,23 @@
+<ion-view view-title="{{ 'story' | translate }} ({{ 'chinese' | translate }})">
+  <ion-content>
+        <ion-list>
+
+         <ion-item ng-repeat="chat in chats" class="item item-text-wrap" href="#/tab/story/{{chat.id}}">
+          <div ng-class="isItemShown(chat) ? 'item-expand active' : 'item-expand inactive'">
+            <h2>{{ chat.title }}</h2>
+            <p>{{ chat.subtitle }}</p>
+            <pre>{{ chat.text }}</pre>
+          </div>
+          <div class="item-expand-footer">
+            <i ng-class="isItemShown(chat) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'"></i>
+            {{ isItemShown(chat) ? 'Less' : 'More' }}
+          </div>
+          <!-- <div ng-click="toggleItem(chat)" class="item-expand-footer">
+            <i ng-class="isItemShown(chat) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'"></i>
+            {{ isItemShown(chat) ? 'Less' : 'More' }}
+          </div> -->
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+</ion-view>
